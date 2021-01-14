@@ -7,6 +7,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.json.simple.parser.ParseException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,7 +35,6 @@ import io.mosip.pmp.policy.dto.PolicyUpdateResponseDto;
 import io.mosip.pmp.policy.dto.PolicyWithAuthPolicyDto;
 import io.mosip.pmp.policy.dto.RequestWrapper;
 import io.mosip.pmp.policy.dto.ResponseWrapper;
-import io.mosip.pmp.policy.errorMessages.PolicyServiceLogger;
 import io.mosip.pmp.policy.service.PolicyManagementService;
 import io.swagger.annotations.Api;
 
@@ -57,6 +58,8 @@ import io.swagger.annotations.Api;
 @RestController
 @Api(tags = { "Partner Management : Policy Management Controller " })
 public class PolicyManagementController {
+
+	private static final Logger PolicyServiceLogger = LoggerFactory.getLogger(PolicyManagementController.class);
 
 	@Autowired
 	private PolicyManagementService policyManagementService;

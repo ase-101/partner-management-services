@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@ComponentScan({ "io.mosip.pmp.policy.*", "io.mosip.kernel.auth.adapter.*" })
+@ComponentScan({ "io.mosip.pmp.policy.*", "io.mosip.kernel.auth.adapter.*","io.mosip.kernel.core.logger.config" })
 @EnableSwagger2
 public class PmpPolicyApplication {
 

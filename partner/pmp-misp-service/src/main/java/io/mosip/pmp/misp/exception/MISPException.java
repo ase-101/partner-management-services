@@ -1,9 +1,12 @@
 package io.mosip.pmp.misp.exception;
 
 import io.mosip.kernel.core.exception.BaseUncheckedException;
-import io.mosip.pmp.misp.utils.MispLogger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MISPException  extends BaseUncheckedException {
+
+	private static final Logger MispLogger = LoggerFactory.getLogger(MISPException.class);
 	
 	/**
 	 * 

@@ -11,10 +11,10 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.util.ContentCachingRequestWrapper;
 import org.springframework.web.util.ContentCachingResponseWrapper;
-
-import io.mosip.pmp.policy.errorMessages.PolicyServiceLogger;
 
 /**
  * @author Nagarjuna Kuchi
@@ -23,7 +23,8 @@ import io.mosip.pmp.policy.errorMessages.PolicyServiceLogger;
  */
 public class ReqResFilter implements Filter {
 
-	
+	private static final Logger PolicyServiceLogger = LoggerFactory.getLogger(ReqResFilter.class);
+
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// init method overriding

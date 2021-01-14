@@ -1,6 +1,8 @@
 package io.mosip.pmp.policy.errorMessages;
 
 import io.mosip.kernel.core.exception.BaseUncheckedException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 
@@ -8,6 +10,8 @@ import io.mosip.kernel.core.exception.BaseUncheckedException;
  * @version 1.0
  */
 public class PolicyManagementServiceException extends BaseUncheckedException {
+
+	private static final Logger PolicyServiceLogger = LoggerFactory.getLogger(PolicyManagementServiceException.class);
 
 	/**
 	 * 

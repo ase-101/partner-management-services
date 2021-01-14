@@ -12,7 +12,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
  * @author Nagarjuna Kuchi
  *
  */
-@SpringBootApplication(scanBasePackages = "io.mosip.pmp.misp.*")
+@SpringBootApplication(scanBasePackages = {"io.mosip.pmp.misp.*", "io.mosip.kernel.core.logger.config"})
 public class MispServiceTest {
 
 	/**

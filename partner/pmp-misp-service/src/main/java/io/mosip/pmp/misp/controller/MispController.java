@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +33,6 @@ import io.mosip.pmp.misp.dto.RequestWrapper;
 import io.mosip.pmp.misp.dto.ResponseWrapper;
 import io.mosip.pmp.misp.entity.MISPlKeyUniqueKeyEntity;
 import io.mosip.pmp.misp.service.MISPManagementService;
-import io.mosip.pmp.misp.utils.MispLogger;
 import io.swagger.annotations.Api;
 
 /**
@@ -57,6 +58,8 @@ import io.swagger.annotations.Api;
 @RestController
 @Api(tags = { "Partner Management : MOSIP Infra Provider controller" })
 public class MispController {
+
+	private static final Logger MispLogger = LoggerFactory.getLogger(MispController.class);
 
 	@Autowired
 	private MISPManagementService mispManagementService;	

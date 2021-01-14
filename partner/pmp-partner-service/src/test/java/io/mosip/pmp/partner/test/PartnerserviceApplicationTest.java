@@ -8,7 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author sanjeev.shrivastava
  *
  */
-@SpringBootApplication(scanBasePackages = {"io.mosip.pmp.keycloak.*","io.mosip.pmp.partner.*","io.mosip.pmp.authdevice.*","io.mosip.pmp.regdevice.*"})
+@SpringBootApplication(scanBasePackages = {"io.mosip.pmp.keycloak.*","io.mosip.pmp.partner.*","io.mosip.pmp.authdevice.*"
+		,"io.mosip.pmp.regdevice.*","io.mosip.kernel.core.logger.config"})
 public class PartnerserviceApplicationTest {
 	
 	/**

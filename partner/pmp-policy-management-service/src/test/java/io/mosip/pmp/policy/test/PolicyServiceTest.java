@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Nagarjuna
  *
  */
-@SpringBootApplication(scanBasePackages = "io.mosip.pmp.policy.*")
+@SpringBootApplication(scanBasePackages = {"io.mosip.pmp.policy.*","io.mosip.kernel.core.logger.config"})
 public class PolicyServiceTest {
 
 	/**

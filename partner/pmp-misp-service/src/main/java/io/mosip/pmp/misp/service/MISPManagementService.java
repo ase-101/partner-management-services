@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -35,7 +37,6 @@ import io.mosip.pmp.misp.exception.ErrorMessages;
 import io.mosip.pmp.misp.exception.MISPException;
 import io.mosip.pmp.misp.repository.MispLicenseKeyRepository;
 import io.mosip.pmp.misp.repository.MispServiceRepository;
-import io.mosip.pmp.misp.utils.MispLogger;
 
 /**
  * <p>This class manages business logic before or after performing database operations.</p>
@@ -56,6 +57,8 @@ import io.mosip.pmp.misp.utils.MispLogger;
  */
 @Service
 public class MISPManagementService {
+
+	private static final Logger MispLogger = LoggerFactory.getLogger(MISPManagementService.class);
 
 	@Autowired
 	private MispServiceRepository mispRepository;

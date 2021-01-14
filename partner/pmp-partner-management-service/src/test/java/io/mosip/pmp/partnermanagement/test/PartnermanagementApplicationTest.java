@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author sanjeev.shrivastava
  *
  */
-@SpringBootApplication(scanBasePackages = "io.mosip.pmp.partnermanagement.*")
+@SpringBootApplication(scanBasePackages = {"io.mosip.pmp.partnermanagement.*","io.mosip.kernel.core.logger.config"})
 public class PartnermanagementApplicationTest {
 	
 	/**

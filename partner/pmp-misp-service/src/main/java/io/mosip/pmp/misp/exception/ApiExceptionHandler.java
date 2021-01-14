@@ -7,6 +7,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -29,7 +31,6 @@ import io.mosip.kernel.core.exception.ExceptionUtils;
 import io.mosip.kernel.core.exception.ServiceError;
 import io.mosip.kernel.core.http.ResponseWrapper;
 import io.mosip.kernel.core.util.EmptyCheckUtils;
-import io.mosip.pmp.misp.utils.MispLogger;
 
 
 /**
@@ -41,7 +42,9 @@ import io.mosip.pmp.misp.utils.MispLogger;
  */
 @RestControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
-	
+
+	private static final Logger MispLogger = LoggerFactory.getLogger(ApiExceptionHandler.class);
+
 	@Autowired
 	private ObjectMapper objectMapper;
 	
